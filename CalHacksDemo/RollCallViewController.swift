@@ -15,7 +15,7 @@ class RollCallViewController: UIViewController {
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     
-    // Top 6 Baby Names of 2019
+    // Top 6 Baby Names of 2019 - Source: ssa.gov
     let nameList = ["Liam", "Olivia", "Noah", "Emma", "Oliver", "Ava"].shuffled()
     
     var nameToCall: [String]!

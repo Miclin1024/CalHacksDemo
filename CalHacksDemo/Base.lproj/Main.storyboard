@@ -78,8 +78,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TqW-Db-CsI" secondAttribute="bottom" constant="10" id="O6a-gJ-7i1"/>
                                         <constraint firstItem="TqW-Db-CsI" firstAttribute="centerX" secondItem="SYK-WL-916" secondAttribute="centerX" id="QFh-C4-Jz3"/>
-                                        <constraint firstAttribute="bottom" secondItem="TqW-Db-CsI" secondAttribute="bottom" constant="10" id="yr4-PB-wx3"/>
                                     </constraints>
                                 </view>
                                 <constraints>
