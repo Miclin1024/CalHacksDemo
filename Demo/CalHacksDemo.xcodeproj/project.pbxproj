@@ -12,8 +12,9 @@
 		1A2877C424F74539000F0B78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2877C224F74539000F0B78 /* Main.storyboard */; };
 		1A2877C624F7453B000F0B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2877C524F7453B000F0B78 /* Assets.xcassets */; };
 		1A2877C924F7453B000F0B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2877C724F7453B000F0B78 /* LaunchScreen.storyboard */; };
-		1A2877D324F7459D000F0B78 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2877D224F7459D000F0B78 /* ResultViewController.swift */; };
-		1A2877D724F74737000F0B78 /* RollCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2877D624F74737000F0B78 /* RollCallViewController.swift */; };
+		1A2877D324F7459D000F0B78 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2877D224F7459D000F0B78 /* ResultVC.swift */; };
+		1A2877D724F74737000F0B78 /* RollCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2877D624F74737000F0B78 /* RollCallVC.swift */; };
+		1A44589B2722A95E0088662A /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44589A2722A95E0088662A /* Roster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		1A2877C524F7453B000F0B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A2877C824F7453B000F0B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A2877CA24F7453B000F0B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A2877D224F7459D000F0B78 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		1A2877D624F74737000F0B78 /* RollCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollCallViewController.swift; sourceTree = "<group>"; };
+		1A2877D224F7459D000F0B78 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		1A2877D624F74737000F0B78 /* RollCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollCallVC.swift; sourceTree = "<group>"; };
+		1A44589A2722A95E0088662A /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		1A2877BB24F74539000F0B78 /* CalHacksDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1A2877BC24F74539000F0B78 /* AppDelegate.swift */,
-				1A2877BE24F74539000F0B78 /* SceneDelegate.swift */,
+				1A4458992722A8FB0088662A /* Models */,
+				1A4458982722A8DD0088662A /* Support Files */,
+				1A4458972722A8C00088662A /* Roll Call */,
 				1A2877C224F74539000F0B78 /* Main.storyboard */,
-				1A2877D224F7459D000F0B78 /* ResultViewController.swift */,
 				1A2877C524F7453B000F0B78 /* Assets.xcassets */,
 				1A2877C724F7453B000F0B78 /* LaunchScreen.storyboard */,
-				1A2877CA24F7453B000F0B78 /* Info.plist */,
-				1A2877D624F74737000F0B78 /* RollCallViewController.swift */,
 			);
 			path = CalHacksDemo;
+			sourceTree = "<group>";
+		};
+		1A4458972722A8C00088662A /* Roll Call */ = {
+			isa = PBXGroup;
+			children = (
+				1A2877D624F74737000F0B78 /* RollCallVC.swift */,
+				1A2877D224F7459D000F0B78 /* ResultVC.swift */,
+			);
+			path = "Roll Call";
+			sourceTree = "<group>";
+		};
+		1A4458982722A8DD0088662A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A2877BC24F74539000F0B78 /* AppDelegate.swift */,
+				1A2877BE24F74539000F0B78 /* SceneDelegate.swift */,
+				1A2877CA24F7453B000F0B78 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		1A4458992722A8FB0088662A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A44589A2722A95E0088662A /* Roster.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +170,9 @@
 			files = (
 				1A2877BD24F74539000F0B78 /* AppDelegate.swift in Sources */,
 				1A2877BF24F74539000F0B78 /* SceneDelegate.swift in Sources */,
-				1A2877D324F7459D000F0B78 /* ResultViewController.swift in Sources */,
-				1A2877D724F74737000F0B78 /* RollCallViewController.swift in Sources */,
+				1A44589B2722A95E0088662A /* Roster.swift in Sources */,
+				1A2877D324F7459D000F0B78 /* ResultVC.swift in Sources */,
+				1A2877D724F74737000F0B78 /* RollCallVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.miclin.CalHacksDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.miclin.CalHacksDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,7 +341,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.miclin.CalHacksDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.miclin.CalHacksDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
