@@ -12,8 +12,24 @@ class Roster {
     
     static let main = Roster()
     
-    // Top 6 Baby Names According to SSA
-    let names = ["Liam", "Olivia", "Noah", "Emma", "Oliver", "Ava"]
+    struct Result: Codable {
+        let presentList: [String]
+        let absentList: [String]
+        
+        enum CodingKeys: String, CodingKey {
+            case presentList = "present"
+            case absentList = "absent"
+        }
+        
+        init(withRoster roster: Roster) {
+            self.presentList = roster.namesPresent
+            self.absentList = roster.namesAbsent
+        }
+    }
+    
+    // MDB Newbies - Class of 2021
+    let names = ["Angeline", "Carol", "Dylan", "Evelyn", "Jared", "Max",
+                 "Michelle", "Oleg", "Rikio", "SangJun", "Shannon"]
     
     private(set) var remainingNames = [String]()
     
@@ -43,5 +59,30 @@ class Roster {
     
     func hasNamesLeft() -> Bool {
         return remainingNames.count != 0
+    }
+    
+    func resultToFile() -> URL? {
+        let result = Result(withRoster: self)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        guard let jsonData = try? encoder.encode(result) else {
+            return nil
+        }
+        
+        guard let jsonString = String(data: jsonData, encoding: .utf8) else {
+            return nil
+        }
+        
+        guard let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        
+        let url = cacheDirectory.appendingPathComponent("RollCall-\(Date.now.formatted(date: .abbreviated, time: .omitted)).json")
+        do {
+            try jsonString.write(to: url, atomically: true, encoding: .utf8)
+            return url
+        } catch {
+            return nil
+        }
     }
 }

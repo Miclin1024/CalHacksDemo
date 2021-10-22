@@ -14,6 +14,14 @@ class RollCallVC: UIViewController {
     
     @IBOutlet weak var presentButton: UIButton! {
         didSet {
+            var config = UIButton.Configuration.tinted()
+            config.title = "Present"
+            config.image = UIImage(systemName: "checkmark.circle.fill")
+            config.baseForegroundColor = .systemGreen
+            config.baseBackgroundColor = .systemGreen
+            config.imagePadding = 10
+            config.buttonSize = .large
+            presentButton.configuration = config
             presentButton.addAction(UIAction { [unowned self] _ in
                 Roster.main.addName(toPresent: self.currentName)
                 self.showNextNameOrResult()
@@ -23,6 +31,14 @@ class RollCallVC: UIViewController {
     
     @IBOutlet weak var absentButton: UIButton! {
         didSet {
+            var config = UIButton.Configuration.tinted()
+            config.title = "Absent"
+            config.image = UIImage(systemName: "xmark.circle.fill")
+            config.baseForegroundColor = .systemRed
+            config.baseBackgroundColor = .systemRed
+            config.imagePadding = 10
+            config.buttonSize = .large
+            absentButton.configuration = config
             absentButton.addAction(UIAction { [unowned self] _ in
                 Roster.main.addName(toAbsent: self.currentName)
                 self.showNextNameOrResult()

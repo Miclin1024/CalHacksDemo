@@ -3,7 +3,6 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="NQh-rW-lWM">
-                                <rect key="frame" x="50" y="318.33333333333331" width="290" height="207.66666666666669"/>
+                                <rect key="frame" x="50" y="321.66666666666669" width="290" height="201.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15s-Vi-ohV">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="37"/>
@@ -27,25 +26,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d2q-5m-QEH">
-                                        <rect key="frame" x="0.0" y="87" width="290" height="120.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="87" width="290" height="114"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGr-Bm-aet">
-                                                <rect key="frame" x="0.0" y="0.0" width="290" height="50.333333333333336"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Present" imagePadding="10" buttonSize="large" titleAlignment="center">
-                                                    <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6v-DP-cMQ">
-                                                <rect key="frame" x="0.0" y="70.333333333333371" width="290" height="50.333333333333343"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDQ-EI-nln">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="47"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="xmark.circle.fill" catalog="system" title="Absent" imagePadding="10" buttonSize="large" titleAlignment="center">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Button" buttonSize="large"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-lN-v2D">
+                                                <rect key="frame" x="0.0" y="67" width="290" height="47"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Button" buttonSize="large"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -61,9 +52,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="absentButton" destination="t6v-DP-cMQ" id="XIQ-xM-obG"/>
+                        <outlet property="absentButton" destination="pDQ-EI-nln" id="Fb2-Ch-MD9"/>
                         <outlet property="nameLabel" destination="15s-Vi-ohV" id="utu-sU-T7C"/>
-                        <outlet property="presentButton" destination="zGr-Bm-aet" id="pKj-O0-JfJ"/>
+                        <outlet property="presentButton" destination="P5v-lN-v2D" id="Vyu-io-OzW"/>
                         <segue destination="Tii-TT-i5p" kind="show" identifier="toResults" id="ddv-RC-6DR"/>
                     </connections>
                 </viewController>
@@ -80,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FmN-pS-l29">
-                                <rect key="frame" x="50" y="284" width="290" height="276"/>
+                                <rect key="frame" x="50" y="298" width="290" height="248"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDl-Oh-0BF">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="37"/>
@@ -89,7 +80,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="muP-7e-9pT">
-                                        <rect key="frame" x="0.0" y="67" width="290" height="48.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="67" width="290" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-c5-FKf">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="23"/>
@@ -107,15 +98,15 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSC-HJ-a07">
-                                                <rect key="frame" x="0.0" y="28" width="290" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="28" width="290" height="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GL5-VZ-Trf">
-                                        <rect key="frame" x="0.0" y="145.33333333333331" width="290" height="48.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="142" width="290" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-wS-bwK">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="23"/>
@@ -133,20 +124,28 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz6-6T-QpJ">
-                                                <rect key="frame" x="0.0" y="28" width="290" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="28" width="290" height="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-4E-kfM">
-                                        <rect key="frame" x="0.0" y="223.66666666666669" width="290" height="52.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="arrow.clockwise" catalog="system" title="Start Over" subtitle="This will reset the lists" imagePadding="10" cornerStyle="medium">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
-                                        </buttonConfiguration>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PdG-cp-w8j">
+                                        <rect key="frame" x="0.0" y="217" width="290" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-ad-otN">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NF-cx-dQa">
+                                                <rect key="frame" x="150" y="0.0" width="140" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -161,7 +160,8 @@
                     <connections>
                         <outlet property="absentListLabel" destination="Iz6-6T-QpJ" id="Jtv-ic-AMp"/>
                         <outlet property="presentListLabel" destination="zSC-HJ-a07" id="kO3-C7-xYi"/>
-                        <outlet property="resetButton" destination="yO6-4E-kfM" id="Anc-ak-MYL"/>
+                        <outlet property="resetButton" destination="5NF-cx-dQa" id="kmg-FK-hPh"/>
+                        <outlet property="shareButton" destination="SN3-ad-otN" id="yeY-Xj-PAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zc-cg-iYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -170,7 +170,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
